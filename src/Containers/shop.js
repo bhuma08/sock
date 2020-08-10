@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import "../style.css";
 import Like from "../Components/Like"
-import Basket from "../Components/Basket"
 import Review from "../Components/Review"
 
 class Shop extends Component {
@@ -23,7 +22,7 @@ class Shop extends Component {
     render() {
         return (
             <div>
-                <h1>This is the Shop Page!</h1>
+                <h1 id="shop">This is the Shop Page!</h1>
         
                 { this.state.loading || !this.state.picture ? (
                 <div>loading...</div>

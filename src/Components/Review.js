@@ -8,13 +8,15 @@ class Review extends Component {
         }
     }
 
-    handleChange = e => this.setState({ review: e.target.value })
+    handleChange = e => this.setState({ review: e.target.value }) 
 
     addReview = e => {
         e.preventDefault()
-        const data = this.state
-        console.log("Review data is: ", data)
-        // this.setState({ review: " " })
+        this.setState(prevState => ({ 
+            review: prevState.review,
+            review: " "
+        }));
+        console.log(this.state.review)
     }
 
     render() {
@@ -22,8 +24,8 @@ class Review extends Component {
         return (
             <div>
                 
-                <textarea value={this.state.review} onChange={this.handleChange}></textarea><br></br>           
-                <input type="submit" onClick= {this.addReview} value="Add a review"></input>
+                <textarea value={this.state.review} name="reviewInput" id="reviewInput" onChange={this.handleChange}></textarea><br></br>           
+                <input type="submit" id="submit" onClick= {this.addReview} value="Add a review"></input>
                 <p>{ this.state.review }</p>
             
             </div>

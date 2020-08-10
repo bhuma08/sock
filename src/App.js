@@ -9,7 +9,7 @@ class App extends React.Component {
   state = {};
   render() {
     return (
-      <>
+      <main id="app">
       <Nav></Nav>
         <Switch>
           <Route exact path="/" component={Home}></Route>
@@ -17,7 +17,7 @@ class App extends React.Component {
           <Route path="/shop" component={Shop}></Route>
         </Switch>
         
-      </>
+      </main>
     );
   }
 }

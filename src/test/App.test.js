@@ -1,12 +1,26 @@
 import App from "../App";
+// import { mount } from 'enzyme';
+// import { MemoryRouter } from 'react-router';
+// import About from "../Containers/About"
 
-describe("App", () => {
-  let component;
+describe('App', () => {
+  let component
+  
   beforeEach(() => {
-    component = shallow(<App />);
+      component = shallow(<App />);
+  })
+
+  test("it renders", () => {
+      expect(component.find('#app')).toHaveLength(1);
   });
 
-  test("Check h1 text content", () => {
-    expect(component.find("h1").text()).toBe("Mugisha's React App");
-  });
-});
+  // test("valid path", ()=> {
+  //   const wrapper = mount(
+  //     <MemoryRouter initialEntries = {["/about"]}>
+  //       <App/>
+  //     </MemoryRouter>
+  //   )
+
+  // expect(wrapper.find(About)).toHaveLength(1)
+  // })
+})

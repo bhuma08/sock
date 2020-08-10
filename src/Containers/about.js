@@ -22,7 +22,7 @@ class About extends Component {
         }
 
     render() {
-        const renderThese = this.props.socksayings.map((sock, id) => <li key={id}>{sock}</li>)
+        const renderThese = this.props.socksayings.map((th, i) => <li key={i}>{th}</li>)
 
         return (
             <div>
@@ -33,18 +33,15 @@ class About extends Component {
                 </ul>
 
                 <form>
-                <input type="text" value={this.state.userInput} onChange={this.handleChange}></input>
-                <input type="submit" value="Sock it" onClick={this.updateSockSaying}></input>
-                <input type="submit" value="Un-Sock it" onClick={this.removeSockSaying}></input>
+                <input type="text" id="saying" value={this.state.userInput} onChange={this.handleChange}></input>
+                <input type="submit" value="Sock it" id="submit" onClick={this.updateSockSaying}></input>
+                <input type="submit" id="deleteSaying" value="Un-Sock it" onClick={this.removeSockSaying}></input>
                 </form>
                 
             </div>
         )
     }
 }
-
-
-//fetch api -github
 
 const mapStateToProps = state => ({
     socksayings:state.sock
