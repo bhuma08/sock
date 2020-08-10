@@ -1,0 +1,9 @@
+ul {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row: auto;
+}
+
+li {
+    list-style: none;
+}
