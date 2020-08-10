@@ -1,5 +1,8 @@
 import React, {Component} from "react";
 import "../style.css";
+import Like from "../Components/Like"
+import Basket from "../Components/Basket"
+import Review from "../Components/Review"
 
 class Shop extends Component {
     constructor() {
@@ -17,11 +20,6 @@ class Shop extends Component {
         console.log(data);
     }
 
-   
-
-
-    
-
     render() {
         return (
             <div>
@@ -35,35 +33,29 @@ class Shop extends Component {
                 <div>
                 <img src = {this.state.picture[0].image_link}/>
                 <div>{this.state.picture[0].price}</div>
+                <Like></Like>
+                <Review></Review>
                 </div>
 
                 <div>
                 <img src = {this.state.picture[1].image_link}/>
                 <div>{this.state.picture[1].price}</div>
+                <Like></Like>
+                <Review></Review>
                 </div>
 
                 <div>
                 <img src = {this.state.picture[2].image_link}/>
                 <div>{this.state.picture[2].price}</div>
+                <Like></Like>
+                <Review></Review>
                 </div>
 
-                </div>
-
-                
+                </div>   
                 )}
 
             </div>
-
-        )
-            
-
-        
-            // <div>
-         
-   
-
-            // </div>
-        
+        )  
     }
 }
 

@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-class Like extends Component {
+class Basket extends Component {
     constructor(){
         super()
         this.state = { 
             likeOrDislike: false,
         }
     }
-    Heart = e => {
+    Basket = e => {
         e.stopPropagation()
         this.setState(prevState => ({ likeOrDislike: !prevState.likeOrDislike }))
     }
@@ -16,14 +16,11 @@ class Like extends Component {
     render() {
         return (
             <div>
-                <span id="heartBtn" onClick={this.Heart} style={{ color: this.state.likeOrDislike ? 'pink' : 'grey' }}>  ❤  </span>
+                <span id="heartBtn" onClick={this.Basket} style={{ color: this.state.likeOrDislike ? 'pink' : 'grey' }} > 🛒	#128722 </span>
            
             </div>
         )
     }
 }
 
-
-
-
-export default Like;
+export default Basket;
