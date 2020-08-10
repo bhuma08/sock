@@ -6,8 +6,6 @@ import "../style.css"
 class Nav extends Component {
     constructor() {
         super();
-
-
     }
 
     render() {

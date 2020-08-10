@@ -1,4 +1,4 @@
-ul {
+.navList {
     display: grid;
     grid-template-columns: auto auto auto;
     grid-row: auto;
@@ -6,4 +6,12 @@ ul {
 
 li {
     list-style: none;
+}
+
+#container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-row: auto;
+    margin-left: 10%;
+
 }
